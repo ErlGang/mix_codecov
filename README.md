@@ -1,11 +1,16 @@
 # Mix.Tasks.Codecov
 
-**TODO: Add description**
+`mix codecov` task creates `./codecov.json` report based on the exported test coverage
+
+## Usage examples
+
+* `mix codecov` - if no arguments supplied, the task imports all `*.coverdata` files from the `./cover` directory.
+* `mix codecov _build/test/cover cover` - any supplied argument is treated as a directory name, the task imports all `*.coverdata` files from these directories.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `mix_codecov` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `mix_codecov` to your list of dependencies
+in `mix.exs`:
 
 ```elixir
 def deps do
@@ -14,8 +19,3 @@ def deps do
   ]
 end
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/mix_codecov>.
-
